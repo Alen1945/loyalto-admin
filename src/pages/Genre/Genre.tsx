@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import CustomStyle from "../../assets/styles/layout.module.sass";
+import CustomStyle from "../../assets/styles/layout.module.scss";
 import { getListGenre } from "../../store/actions/genreActions";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";

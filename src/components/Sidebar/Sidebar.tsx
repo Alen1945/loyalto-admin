@@ -1,6 +1,6 @@
 import React from "react";
-import CustomStyle from "../../assets/styles/layout.module.sass";
-import ListSidebar from "./components/Sidebar";
+import CustomStyle from "../../assets/styles/layout.module.scss";
+import ListSidebar from "./components/ListSidebar";
 
 const Sidebar: React.FC = () => {
   return (

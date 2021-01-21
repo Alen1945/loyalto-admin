@@ -1,5 +1,5 @@
 import React from "react";
-import CustomStyle from "../../assets/styles/layout.module.sass";
+import CustomStyle from "../../assets/styles/layout.module.scss";
 const Dashboard: React.FC = () => {
   return (
     <div className="container-fluid">

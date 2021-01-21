@@ -1,5 +1,5 @@
 import React from "react";
-import CustomStyle from "../../assets/styles/layout.module.sass";
+import CustomStyle from "../../assets/styles/layout.module.scss";
 
 const Navbar: React.FC = () => {
   return (

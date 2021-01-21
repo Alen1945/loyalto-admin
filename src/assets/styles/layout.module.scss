@@ -1,0 +1,43 @@
+.containerListMovie {
+  .customImage {
+    width: 200px;
+    max-height: auto;
+    cursor: pointer;
+  }
+  .customDesc {
+    max-width: 200px !important;
+  }
+  .customNo {
+    max-width: 10px !important;
+  }
+  .customTitle {
+    max-width: 100px;
+  }
+  .customContainerImage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: none;
+  }
+  .LinkElement {
+    transition: 0.3s ease-in;
+    .customImage.img1 {
+      display: inline-block;
+      transition: 0.3s ease-in;
+    }
+    .customImage.img2 {
+      display: none;
+      transition: 0.3s ease-in;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: #eaeaea;
+      .customImage.img1 {
+        display: none;
+      }
+      .customImage.img2 {
+        display: inline-block;
+      }
+    }
+  }
+}

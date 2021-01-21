@@ -7,7 +7,7 @@ import {
 
 export interface genreReducersProps {
   isLoading: boolean;
-  listGenre: any;
+  listGenre: any[];
 }
 const initialState: genreReducersProps = {
   isLoading: false,

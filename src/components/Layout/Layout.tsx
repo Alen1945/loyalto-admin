@@ -1,12 +1,12 @@
 import React from "react";
-import CustomStyle from "../../assets/styles/layout.module.sass";
+import CustomStyle from "../../assets/styles/layout.module.scss";
 import { Switch, Route } from "react-router-dom";
 import { Navbar } from "../Navbar";
 import { Footer } from "../Footer";
 import { Sidebar } from "../Sidebar";
 import { Dashboard } from "../../pages/Dashboard";
 import { GenrePage } from "../../pages/Genre";
-
+import { MoviePage } from "../../pages/Movie";
 const WrapPage: React.FC<{
   title?: string;
 }> = (props) => {
@@ -55,6 +55,15 @@ const Layout: React.FC = () => {
           render={() => (
             <WrapPage title="Genre Movie">
               <GenrePage />
+            </WrapPage>
+          )}
+        />
+        <Route
+          exact
+          path="/app/movie"
+          render={() => (
+            <WrapPage title="Movie List">
+              <MoviePage />
             </WrapPage>
           )}
         />
