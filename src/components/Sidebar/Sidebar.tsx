@@ -1,5 +1,6 @@
 import React from "react";
 import CustomStyle from "../../assets/styles/layout.module.sass";
+import ListSidebar from "./components/Sidebar";
 
 const Sidebar: React.FC = () => {
   return (
@@ -52,24 +53,17 @@ const Sidebar: React.FC = () => {
             role="menu"
             data-accordion="false"
           >
-            <li className="nav-item menu-open">
-              <a href="#" className="nav-link active">
-                <i className="nav-icon fas fa-tachometer-alt"></i>
-                <p>Dashboard</p>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="pages/widgets.html" className="nav-link">
-                <i className="nav-icon fas fa-th"></i>
-                <p>Genre Movie</p>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="pages/widgets.html" className="nav-link">
-                <i className="nav-icon fas fa-image"></i>
-                <p>Movie List</p>
-              </a>
-            </li>
+            <ListSidebar
+              to="/app/dashboard"
+              textList="Dashboard"
+              icon="fa-tachometer-alt"
+            />
+            <ListSidebar to="/app/genre" textList="Genre Movie" icon="fa-th" />
+            <ListSidebar
+              to="/app/movie"
+              textList="Movie List"
+              icon="fa-image"
+            />
           </ul>
         </nav>
       </div>
