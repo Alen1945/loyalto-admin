@@ -27,6 +27,7 @@ export const getListMovie = (page: number | string) => async (
           },
         },
       });
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     } else {
       throw new Error("something error");
     }

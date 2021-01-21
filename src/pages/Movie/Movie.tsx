@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, useHistory, Link } from "react-router-dom";
 import CustomStyle from "../../assets/styles/layout.module.scss";
 import { getListMovie } from "../../store/actions/movieActions";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,6 +13,7 @@ const GenrePage: React.FC = () => {
   );
   const dispatch = useDispatch();
   const location = useLocation();
+  const history = useHistory();
   useEffect(() => {
     const dataLocation = qs.parse(location.search, { ignoreQueryPrefix: true });
     dispatch(getListMovie(parseInt(dataLocation?.page?.toString() || "1")));
@@ -24,7 +25,7 @@ const GenrePage: React.FC = () => {
         <div className="col-12">
           <div className="card">
             <div className="card-header">
-              <h3 className="card-title">List Genre</h3>
+              <h3 className="card-title">List Movie</h3>
             </div>
             <div className="card-body">
               <table
@@ -74,7 +75,13 @@ const GenrePage: React.FC = () => {
                     ))}
                   {!isLoading &&
                     listMovie.map((v: any, i: number) => (
-                      <tr key={v?.id} className={CustomStyle.LinkElement}>
+                      <tr
+                        key={v?.id}
+                        className={CustomStyle.LinkElement}
+                        onClick={() => {
+                          history.push(`/app/movie/${v.id}`);
+                        }}
+                      >
                         <td className={CustomStyle.customNo}>{i + 1}</td>
                         <td className={CustomStyle.customTitle}>{v?.title}</td>
                         <td className={CustomStyle.customContainerImage}>

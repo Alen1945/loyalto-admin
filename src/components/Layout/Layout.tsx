@@ -6,7 +6,7 @@ import { Footer } from "../Footer";
 import { Sidebar } from "../Sidebar";
 import { Dashboard } from "../../pages/Dashboard";
 import { GenrePage } from "../../pages/Genre";
-import { MoviePage } from "../../pages/Movie";
+import { MoviePage, MovieDetail } from "../../pages/Movie";
 const WrapPage: React.FC<{
   title?: string;
 }> = (props) => {
@@ -64,6 +64,15 @@ const Layout: React.FC = () => {
           render={() => (
             <WrapPage title="Movie List">
               <MoviePage />
+            </WrapPage>
+          )}
+        />
+        <Route
+          exact
+          path="/app/movie/:id"
+          render={() => (
+            <WrapPage title="Detail Movie">
+              <MovieDetail />
             </WrapPage>
           )}
         />

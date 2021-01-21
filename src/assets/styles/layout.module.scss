@@ -46,3 +46,84 @@
     justify-content: flex-end;
   }
 }
+
+.containerDetailMovie {
+  .cardCustom {
+    border-bottom: 1px solid var(--primaryColor);
+    background-position: right top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    padding: 0;
+    @media (max-width: 1000px) {
+      height: 650px;
+    }
+    @media (max-width: 800px) {
+      height: 600px;
+    }
+
+    .container {
+      padding: 16px;
+      width: 100%;
+      height: 100%;
+      background-color: linear-gradient(
+        to right,
+        rgba(12.55%, 16.47%, 16.86%, 1) 150px,
+        rgba(12.55%, 16.47%, 16.86%, 0.84) 100%
+      );
+      display: flex;
+      flex-wrap: wrap;
+
+      .imgMovie {
+        width: 350px;
+        box-shadow: 5px 6px rgba(255, 255, 255, 0.7);
+        height: fit-content;
+        @media (max-width: 1000px) {
+          width: 270px;
+        }
+        @media (max-width: 800px) {
+          width: 220px;
+        }
+        .customImage {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .detailMovie {
+        margin-left: 20px;
+        flex: 1;
+        color: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .wrapDetail {
+          max-width: 900px;
+          padding: 30px;
+          background-color: #fff;
+          border-radius: 10px;
+        }
+        .titleMovie {
+          text-transform: uppercase;
+          font-weight: bold;
+          text-align: center;
+          @media (max-width: 1000px) {
+            font-size: 18px;
+          }
+          @media (max-width: 800px) {
+            font-size: 16px;
+          }
+        }
+        .releaseText {
+          font-size: 18px;
+        }
+        .overview {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+        .desc {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

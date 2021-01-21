@@ -4,6 +4,7 @@ import { getListGenre } from "../../store/actions/genreActions";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
 import Skeleton from "react-loading-skeleton";
+import clsx from "clsx";
 const GenrePage: React.FC = () => {
   const { isLoading, listGenre } = useSelector(
     (state: RootState) => state.genreReducers
@@ -23,7 +24,10 @@ const GenrePage: React.FC = () => {
             <div className="card-body">
               <table
                 id="example1"
-                className="table table-bordered table-striped"
+                className={clsx(
+                  "table table-bordered",
+                  !isLoading && "table-striped"
+                )}
               >
                 <thead>
                   <tr>
