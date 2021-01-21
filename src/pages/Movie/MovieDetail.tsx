@@ -12,7 +12,6 @@ const DetailMoviePage: React.FC = () => {
   );
   const dispatch = useDispatch();
   const params = useParams<any>();
-  console.log(detailMovie);
   useEffect(() => {
     dispatch(getDetailMovie(params?.id));
   }, []);
